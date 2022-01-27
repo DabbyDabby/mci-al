@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= 20, initial-scale=1.0">
+    <title>MCI Project</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="contextmenu">
+        <div class="list">
+        
+            <div class="item">
+                <i class="fa fa-plus-square-o"></i>
+                Add to List
+            </div>
+            <div class="item">
+                <i class="fa fa-clone"></i>
+                Quick add to Queue
+            </div>
+            <div class="item">
+                <i class="fa fa-chain-broken"></i>
+                Copy Link / Share
+            </div>
+            <div class="item">
+                <i class="fa fa-minus-square-o"></i>
+                Ignore
+            </div>
+        </div>
+  </div>
+  <!-- <div class="notice">
+      To add a title to your list, right-click and then click "Add to List"!
+  </div> -->
+    <!--Tabs-->
+    <ul class="tabs">
+        <li data-tab-target="#anime" class="active tab">Anime</li>
+        <li data-tab-target="#manga" class="tab">Manga</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="anime" data-tab-content class="active">
+            <table class="table">
+        
+                <thead>
+                    <tr>
+                        <th>
+                            <div ></div>
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" size  placeholder="Search for Anime...">
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" size  placeholder="Rating">
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" size  placeholder="Status">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" alt="" ></td>
+                        <td>Jujutsu Kaisen</td>
+                        <td>5</td>
+                        <td>Finished Airing</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                        </td>
+                        <div id="overlay"></div>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/anime/8/65409.jpg" alt="" ></td>
+                        <td>Nanatsu no Taizai</td>
+                        <td>5</td>
+                        <td>Finished Airing</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="" ></td>
+                        <td>Kimetsu no Yaiba</td>
+                        <td>--</td>
+                        <td>On-Going</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/anime/12/67333.jpg" alt="" ></td>
+                        <td>Fate/Stay Night</td>
+                        <td>5</td>
+                        <td>Finished Airing</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div id="manga" data-tab-content>
+            <table class="table">
+        
+                <thead>
+                    <tr>
+                        <th>
+                            <div ></div>
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" size  placeholder="Search for Manga...">
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" placeholder="Rating">
+                        </th>
+                        <th>
+                            <input type="text" class="search-input" STYLE="color: #FFFFFF; font-family: Noto Sans; background-color: #4B4956;" placeholder="Status">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/manga/3/210341.jpg" alt="" ></td>
+                        <td>Jujutsu Kaisen </td>
+                        <td>5</td>
+                        <td>On-going</td>
+                        <td>
+                            <button data-model-pop="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/manga/2/153111.jpg" alt="" ></td>
+                        <td>Nanatsu no Taizai</td>
+                        <td>4</td>
+                        <td>On-going</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/manga/1/179885.jpg" alt="" ></td>
+                        <td>Jojo's Bizarre Adventure Part 8: Jojolion</td>
+                        <td>5</td>
+                        <td>On-going</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    <tr id="list-entry" entry>
+                        <td><img class="img-placeholder" src="https://cdn.myanimelist.net/images/anime/1632/110707.jpg" alt="" ></td>
+                        <td>Chainsaw Man</td>
+                        <td>5</td>
+                        <td>Finished</td>
+                        <td>
+                            <button data-pop-target="#pop" class="button-menu">+ Add</button>
+                            <div class="pop" id="pop">
+                                <div class="pop-header">
+                                    <div class="pop-title"></div>
+                                    <button data-close-pop class="close-pop">&times;</button>
+                                </div>
+                                <div class="pop-body">
+                                    Title added to list!
+                                </div>
+                            </div>
+                            <div id="overlay"></div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
